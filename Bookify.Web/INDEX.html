@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bookify</title>
+    <base href="/" />
+    <link rel="stylesheet" href="dist/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+
+    <link href="scripts/css/ngDialog.min.css" rel="stylesheet">
+    <link href="scripts/css/ngDialog-theme-default.css" rel="stylesheet">
+
+    <script src="scripts/vendor/angular.js"></script>
+    <script src="scripts/vendor/angular-ui-router.js"></script>
+    <script src="scripts/vendor/angular-ui-bootstrap-modal.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+    <script src="scripts/vendor/hotkeys.js"></script>
+    <link rel="stylesheet" href="scripts/vendor/hotkeys.min.css" />
+
+    <script src="scripts/vendor/ngDialog.js"></script>
+
+
+    <script src="scripts/app/app.js"></script>
+    <script src="scripts/app/app.config.js"></script>
+
+    <script src="scripts/app/routes/search/search.route.js"></script>
+    <script src="scripts/app/routes/search/search.controller.js"></script>
+
+    <script src="scripts/app/routes/login/login.route.js"></script>
+    <script src="scripts/app/routes/login/login.controller.js"></script>
+
+    <script src="scripts/app/routes/signup/signup.route.js"></script>
+    <script src="scripts/app/routes/signup/signup.controller.js"></script>
+
+    <script src="scripts/app/routes/home/home.route.js"></script>
+    <script src="scripts/app/routes/home/home.controller.js"></script>
+
+    <script src="scripts/app/routes/bookDetails/bookDetails.route.js"></script>
+    <script src="scripts/app/routes/bookDetails/bookDetails.controller.js"></script>
+
+    <script src="scripts/app/services/AuthService.js"></script>
+    <script src="scripts/app/services/authInterceptorService.js"></script>
+    <script src="scripts/app/services/authInterceptorService.js"></script>
+
+    <script src="scripts/app/constants/serviceBase.js"></script>
+    <script src="scripts/app/abstract/user.loggedin.js"></script>
+    <script src="scripts/app/abstract/user.notloggedin.js"></script>
+
+    <script src="scripts/app/directives/customHeader/customHeader.directive.js"></script>
+    <script src="scripts/app/directives/customHeader/customHeader.controller.js"></script>
+
+    <script src="scripts/app/services/bookSearchService.js"></script>
+    <script src="scripts/app/services/getLibrariesService.js"></script>
+    <script src="scripts/app/services/statisticsService.js"></script>
+
+    <script src="scripts/app/routes/userProfile/userProfile.route.js"></script>
+    <script src="scripts/app/routes/userProfile/userProfile.controller.js"></script>
+
+    <script src="scripts/app/filters/dateFilterLong.js"></script>
+    <script src="scripts/app/filters/dateFilterShort.js"></script>
+    <script src="scripts/app/filters/bookStatusFilter.js"></script>
+    <script src="scripts/app/filters/bookDamageFilter.js"></script>
+
+    <script src="scripts/app/routes/addNewBook/addNewBook.route.js"></script>
+    <script src="scripts/app/routes/addNewBook/addNewBook.controller.js"></script>
+
+    <script src="scripts/app/routes/author/author.route.js"></script>
+    <script src="scripts/app/routes/author/author.controller.js"></script>
+
+    <script src="scripts/app/routes/bookList/bookList.route.js"></script>
+    <script src="scripts/app/routes/bookList/bookList.controller.js"></script>
+
+    <script src="scripts/app/routes/authors/authors.route.js"></script>
+    <script src="scripts/app/routes/authors/authors.controller.js"></script>
+
+    <script src="scripts/app/services/userService.js"></script>
+    <script src="scripts/app/services/countryService.js"></script>
+    <script src="scripts/app/services/languageService.js"></script>
+    <script src="scripts/app/services/authorsService.js"></script>
+
+    <script src="scripts/app/constants/barcodeGeneratorBase.js"></script>
+
+    <script src="scripts/vendor/angular-hidScanner.js"></script>
+    <script src="scripts/vendor/angularjs-dropdown-multiselect.js"></script>
+    <script src="scripts/vendor/ng-file-upload.js"></script>
+    <script src="https://unpkg.com/chart.js@2.4.0/dist/Chart.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+
+    <link rel="stylesheet" href="https://toert.github.io/Isolated-Bootstrap/versions/4.0.0-beta/iso_bootstrap4.0.0min.css">
+
+    <script type="text/ng-template" id="validation-messages">
+        <div ng-message="required">This field is required.</div>
+        <div ng-message="minlength">The password is too short.</div>
+        <div ng-message="pattern">Passwords do not match.</div>
+        <div ng-message="email">The email address format is incorrect.</div>
+    </script>
+
+</head>
+    <body>
+        <div class="background__image">
+            <customheader ng-if="!isHomePage && !isPageWithValidation"></customheader>
+            <div ui-view></div>
+        </div>
+    </body>
+</html>

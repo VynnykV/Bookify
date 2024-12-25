@@ -1,0 +1,86 @@
+<div class="search">
+	<div class="homepage__search-bar">
+		<input class="search-bar__input" type="text" placeholder="Search..." ng-model="searchQuery" ng-keyup="$event.keyCode == 13 && search()" ng-submit="search()" />
+		<a ng-click="searchButton()" class="search-bar__button">
+			<img src="./images/search-icon.png" alt="">
+		</a>
+	</div>
+	<div class="search__wrapper">
+		<div class="search__filter">
+			<input id="toggle" class="toggle" type="checkbox">
+			<label for="toggle" class="search__filter-header">
+				<span>FILTERS</span>
+				<img src="./images/triangle.png" alt="">
+			</label>
+			<div class="search__filter-expand">
+				<div class="filter__active">
+					<span class="filter__active-header" ng-show="selectedFilters.length">ACTIVE FILTERS</span>
+					<div class="filter__item" ng-repeat="filter in selectedFilters">
+						<span>{{filter}}</span>
+						<button class="remove-item" ng-click="removeAFilter(filter)"><img src="./images/cross-icon.png" alt=""></button>
+					</div>
+				</div>
+				<div class="search__filter-category" ng-show="searchFiltersAuthor[0].length">
+					<img src="./images/circle.png" alt="">
+					<div class="filter-category__all">
+						<span>AUTHOR</span>
+						<div class="filter-category__select-filter" ng-repeat="filter in searchFiltersAuthor[0]" ng-click="applyAFilter(filter)">
+							{{filter}} ({{searchFiltersAuthor[1][$index]}})
+						</div>
+					</div>
+				</div>
+				<div class="search__filter-category" ng-show="searchFiltersGenre[0].length">
+					<img src="./images/circle.png" alt="">
+					<div class="filter-category__all">
+						<span>GENRE</span>
+						<div class="filter-category__select-filter" ng-repeat="filter in searchFiltersGenre[0]" ng-click="applyAFilter(filter)">
+							{{filter}} ({{searchFiltersGenre[1][$index]}})
+						</div>
+					</div>
+				</div>
+				<div class="search__filter-category" ng-show="searchFiltersCategory[0].length">
+					<img src="./images/circle.png" alt="">
+					<div class="filter-category__all">
+						<span>CATEGORY</span>
+						<div class="filter-category__select-filter" ng-repeat="filter in searchFiltersCategory[0]" ng-click="applyAFilter(filter)">
+							{{filter}} ({{searchFiltersCategory[1][$index]}})
+						</div>
+					</div>
+				</div>
+				<div class="search__filter-category" ng-show="searchFiltersLanguage[0].length">
+					<img src="./images/circle.png" alt="">
+					<div class="filter-category__all">
+						<span>LANGUAGE</span>
+						<div class="filter-category__select-filter" ng-repeat="filter in searchFiltersLanguage[0]" ng-click="applyAFilter(filter)">
+							{{filter}} ({{searchFiltersLanguage[1][$index]}})
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="search__result-wrapper">
+			<div class="search__results-title">RESULTS</div>
+			<div class="search__result-container">
+				<div class="search__result" ng-repeat="book in currentBooks">
+					<div class="search__result-book-name">{{book.title}}</div>
+					<div class="search__result-book-author">{{book.author.firstName + ' ' + book.author.lastName}}</div>
+					<div class="book-info-wrapper">
+						<img ng-src="{{book.coverImageUrl}}">
+						<div class="book-info-wrapper-second">
+							<div class="search__result-book-info">
+								<span class="left">Language:</span>
+								<span class="right">{{book.language}}</span><br>
+								<span class="left">Category:</span>
+								<span class="right">{{book.category.name}}</span><br>
+								<span class="left">Genres:</span>
+								<span class="right">{{book.genresString}}</span>
+							</div>
+							<button class="search__result-button" ui-sref="bookDetails({bookId: book.id})">DETAILS</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="search__result-more" ng-click="showMoreResults()" ng-hide="noMoreSearchResults">SHOW MORE RESULTS</button>
+		</div>
+	</div>
+</div>

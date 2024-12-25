@@ -1,0 +1,1 @@
+﻿angular.module('myApp').constant('serviceBase', 'http://localhost:58718/');

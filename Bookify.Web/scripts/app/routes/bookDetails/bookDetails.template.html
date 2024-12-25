@@ -1,0 +1,31 @@
+﻿<div class="book-details">
+    <div class="homepage__search-bar">
+        <input class="search-bar__input" type="text" placeholder="Search..." ng-model="searchQuery" ng-keyup="$event.keyCode == 13 && search()" ng-submit="search()" />
+        <a ng-click="search()" class="search-bar__button">
+            <img src="./images/search-icon.png" alt="">
+        </a>
+    </div>
+    <div class="book-details__container">
+        <div class="book-details__book-bar">
+            <h1 class="book-bar__name">{{book.title}}</h1>
+            <h2 class="book-bar__author">{{book.author.fullName}}</h2>
+        </div>
+        <div class="book-details__content">
+            <h1>Information</h1>
+            <div class="book-details__content-wrapper">
+                <img class="book-cover" ng-src="{{book.coverImageUrl}}" alt="Book Cover">
+                <div class="book-details__information">
+                    <p><strong>Language:</strong> {{book.language}}</p>
+                    <p><strong>Category:</strong> {{book.category.name}}</p>
+                    <p><strong>Genres:</strong> {{book.genresString}}</p>
+                    <p><strong>Pages:</strong> {{book.pageCount}}</p>
+                    <a ng-click="handleReadBook()" class="btn-read-book">Read the Book</a>
+                </div>
+            </div>
+            <div class="book-description">
+                <h1>Book Description</h1>
+                <p>{{book.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

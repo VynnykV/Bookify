@@ -1,0 +1,323 @@
+.profile__container {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.1);
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    .library-details__borrowed {
+        box-shadow: none;
+        margin-top: 0;
+
+        .library-details__library-name {
+            font-size: 18px;
+        }
+    }
+
+    .library-details__borrowed-book {
+        img {
+            width: 100px;
+        }
+    }
+
+    .help-block {
+        font-weight: 500;
+        color: red;
+        margin-top: 10px;
+    }
+}
+
+.profile__bar {
+    background-color: black;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+}
+
+.profile__bar-category {
+    width: 33.33%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    margin-right: -4px;
+
+    &:nth-child(1) {
+        border-top-left-radius: 5px;
+    }
+
+    &:last-child {
+        margin-right: 0px;
+    }
+
+    img {
+        width: 30px;
+        display: block;
+        margin: 10px auto 5px auto;
+    }
+
+    span {
+        color: white;
+        font-weight: 600;
+        font-size: 10px;
+        margin-bottom: 10px;
+        display: block;
+    }
+}
+
+.activeTab {
+    background-color: #b59a56;
+}
+
+.profile__information-wrapper {
+    margin: 25px;
+
+    .error-message {
+        margin-top: 10px;
+        font-weight: 500;
+        color: red
+    }
+}
+
+.profile__information-header, .profile__information-sub-header {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.profile__information-sub-header {
+    padding-top: 30px;
+}
+
+.information__photo {
+    
+    .profile__information-header {
+        margin-bottom: 15px;
+    }
+
+    img {
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.1);
+    }
+}
+
+.information__basic {
+    margin-top: 25px;
+
+    label {
+        font-weight: 600;
+        font-size: 16px;
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+
+    input {
+        border: 0;
+        margin: 0;
+        padding: 10px;
+        width: calc(100% - 20px);
+        display: block;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+
+    span {
+        margin-top: 15px;
+        color: red;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    button {
+        margin-top: 30px;
+        width: calc(100%);
+        padding: 10px;
+        background-color: #b59a56;
+        color: white;
+        border: 0;
+        font-weight: 600;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+    }
+}
+
+.information__account {
+    margin-top: 50px;
+
+    label {
+        font-weight: 600;
+        font-size: 16px;
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+
+    input {
+        border: 0;
+        margin: 0;
+        padding: 10px;
+        width: calc(100% - 20px);
+        display: block;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+
+    span {
+        margin-top: 15px;
+        color: red;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    button {
+        margin-top: 30px;
+        width: calc(100%);
+        padding: 10px;
+        background-color: #b59a56;
+        color: white;
+        border: 0;
+        font-weight: 600;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .profile__container {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .information__basic {
+        input, select {
+            width: calc(60% - 20px);
+        }
+
+        button {
+            width: 40%;
+        }
+    }
+
+    .information__account {
+        input {
+            width: calc(60% - 20px);
+        }
+
+        button {
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .profile__container {
+        display: flex;
+
+        .library-details__borrowed {
+             width: calc(75% - 50px);
+        }
+    }
+
+    .profile__bar {
+        display: inline-block;
+        width: 30%;
+        height: auto;
+        border-top-right-radius: 0px;
+    }
+
+    .profile__information {
+        display: inline-block;
+        width: 70%;
+    }
+
+    .profile__bar-category {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15px 25px;
+        border-top-right-radius: 0px;
+
+        img {
+            margin: 0;
+            margin-right: 15px;
+            display: inline-block;
+        }
+
+        span {
+            margin: 0;
+            display: inline-block;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .profile__bar {
+        width: 25%;
+    }
+
+    .profile__information {
+        width: 75%;
+    }
+
+    .information__basic {
+        display: inline-block;
+        width: 50%;
+        margin-top: 50px;
+
+        input, select {
+            width: calc(90% - 20px);
+        }
+    }
+
+    .information__account {
+        display: inline-block;
+        width: 49%;
+        margin-top: 50px;
+
+        input {
+            width: calc(90% - 20px);
+        }
+    }
+
+    .profile__information-wrapper {
+        display: block;
+    }
+
+    .information__container {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1430px) {
+    .profile__information-wrapper {
+        margin: 50px;
+    }
+    
+    .profile__bar {
+        width: 20%;
+    }
+
+    .information__basic {
+        input, select {
+            width: 300px;
+        }
+    }
+
+    .information__account {
+        input {
+            width: 300px;
+        }
+    }
+}

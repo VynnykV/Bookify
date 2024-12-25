@@ -1,0 +1,65 @@
+<div class="homepage">
+    <div class="homepage__container">
+        <div class="logo">Bookify</div>
+        <div class="homepage__search-bar">
+            <input class="search-bar__input" type="text" placeholder="Search e.g., design, programming, or cooking" ng-model="searchQuery" ng-keyup="$event.keyCode == 13 && search()" ng-submit="search()">
+            <a ng-click="search()" class="search-bar__button">
+                <img src="./images/search-icon.png" alt="">
+            </a>
+        </div>
+        <div class="homepage__buttons" ng-hide="isLoggedIn">
+            <a ui-sref="login" class="homepage__button -login">
+                <div class="wrapper">
+                    <img src="./images/login-icon.png" alt="">
+                    <span>LOGIN</span>
+                </div>
+            </a>
+            <a ui-sref="signup" class="homepage__button register">
+                <div class="wrapper">
+                    <img src="./images/register-icon.png" alt="">
+                    <span>REGISTER</span>
+                </div>
+            </a>
+        </div>
+        <div class="homepage__buttons" ng-show="isLoggedIn && role == 'User'">
+            <a ui-sref="search" class="homepage__button libraries">
+                <div class="wrapper">
+                    <img src="./images/libraries-icon.png" alt="">
+                    <span>ALL BOOKS</span>
+                </div>
+            </a>
+            <a ui-sref="userProfile" class="homepage__button profile">
+                <div class="wrapper">
+                    <img src="./images/profile-icon.png" alt="">
+                    <span>PROFILE</span>
+                </div>
+            </a><br>
+            <a ng-click="logOut()" class="homepage__button log-out">
+                <div class="wrapper">
+                    <img src="./images/log-out-icon.png" alt="">
+                    <span>LOGOUT</span>
+                </div>
+            </a>
+        </div>
+        <div class="homepage__buttons" ng-show="isLoggedIn && role == 'Admin'">
+            <a ui-sref="bookList" class="homepage__button libraries">
+                <div class="wrapper">
+                    <img src="./images/libraries-icon.png" alt="">
+                    <span>BOOKS</span>
+                </div>
+            </a>
+            <a ui-sref="authors" class="homepage__button profile">
+                <div class="wrapper">
+                    <img src="./images/profile-icon.png" alt="">
+                    <span>AUTHORS</span>
+                </div>
+            </a><br>
+            <a ng-click="logOut()" class="homepage__button log-out">
+                <div class="wrapper">
+                    <img src="./images/log-out-icon.png" alt="">
+                    <span>LOGOUT</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

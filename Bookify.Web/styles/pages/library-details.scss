@@ -1,0 +1,183 @@
+.library-details {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.1);
+    margin-top: 50px;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.library-details__bar {
+    background-color: #b59a56;
+    padding: 25px;
+    text-align: center;
+    
+    .library-details__library-name {
+        font-weight: 600;
+        color: white;
+        font-size: 22px;
+    }
+}
+
+.library-details__header {
+    display: block;
+    font-weight: 600;
+    color: #b59a56;
+    font-size: 22px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.library-details__info-left {
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    span {
+        color: #333;
+    }
+}
+
+.library-details__info-right {
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    span {
+        color: #333;
+    }
+}
+
+.library-details__content {
+    img {
+        display: block;
+        width: 200px;
+        margin: 25px auto 0px auto;
+    }
+}
+
+.library-details__borrowed {
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.1);
+    padding: 25px;
+    margin-top: 25px;
+
+    .library-details__library-name {
+        font-weight: 600;
+        color: #b59a56;
+        font-size: 22px;
+    }
+}
+
+.library-details__borrowed-book {
+    display: block;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #666;
+    margin-top: 25px;
+    text-align: center;
+
+    img {
+        max-width: 150px;
+        display: inline-block;
+    }
+
+    .borrowed-book__name {
+        font-family: 'Playfair Display', serif;
+        font-size: 26px;
+        font-weight: 700;
+        margin-top: 10px;
+        color: black;
+    }
+
+    .borrowed-book__author {
+        margin-top: 5px;
+    }
+
+    .borrowed-book__return-date {
+        margin-top: 5px;
+        
+        span {
+            color: black;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .library-details {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .library-details__borrowed {
+        border-radius: 5px;
+    }
+
+    .library-details__content {
+        padding: 25px;
+    }
+
+    .library-details__header {
+        margin: 0;
+    }
+
+    .library-details__info-left {
+        margin-left: 0;
+        margin-right: 0;
+        display: inline-block;
+        width: 50%;
+    }
+
+    .library-details__info-right {
+        margin-left: 0;
+        margin-right: 0;
+        display: inline-block;
+        width: 50%;
+    }
+
+    .library-details__info {
+        display: flex;
+    }
+
+    .library-details__library-name {
+        display: block;
+    }
+
+    .library-details__borrowed-book {
+        width: 49.6%;
+        display: inline-block;
+
+        img {
+            max-width: 100px;
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .library-details__borrowed-book {
+        width: 32.5%;
+    }
+
+    .library-details__info {
+        font-size: 18px;
+    }
+
+    .library-details__content {
+        img {
+            width: 250px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .library-details__info {
+        font-size: 20px;
+    }
+}

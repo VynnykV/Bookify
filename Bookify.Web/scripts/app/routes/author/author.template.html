@@ -1,0 +1,55 @@
+﻿<div class="add-new-author">
+	<div class="add-new-author__header">{{ isEditMode ? 'EDIT AUTHOR' : 'ADD AUTHOR' }}</div>
+	<form class="add-new-member" name="memberForm" novalidate>
+		<div class="add-new-author__info-wrapper add-new-member__wrapper">
+			<div class="form-group">
+				<label>FIRST NAME</label>
+				<input type="text" placeholder="First Name" name="firstName" ng-model="member.firstName" required>
+				<div class="help-block" ng-messages="memberForm.firstName.$error" ng-if="memberForm.firstName.$touched">
+					<div ng-messages-include="validation-messages"></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>LAST NAME</label>
+				<input type="text" placeholder="Last Name" name="lastName" ng-model="member.lastName" required />
+				<div class="help-block" ng-messages="memberForm.lastname.$error" ng-if="memberForm.lastname.$touched">
+					<div ng-messages-include="validation-messages"></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>BIOGRAPHY</label>
+				<input type="text" placeholder="Biography" name="biography" ng-model="member.biography" />
+				<div class="help-block" ng-messages="memberForm.biography.$error" ng-if="memberForm.biography.$touched">
+					<div ng-messages-include="validation-messages"></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>BIRTH DATE</label>
+				<input type="date" placeholder="Birth Date" name="birthDate" ng-model="member.birthDate" />
+				<div class="help-block" ng-messages="memberForm.birthDate.$error" ng-if="memberForm.birthDate.$touched">
+					<div ng-messages-include="validation-messages"></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>DEATH DATE</label>
+				<input type="date" placeholder="Death Date" name="deathDate" ng-model="member.deathDate" />
+				<div class="help-block" ng-messages="memberForm.deathDate.$error" ng-if="memberForm.deathDate.$touched">
+					<div ng-messages-include="validation-messages"></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>COUNTRY</label>
+				<select name="country" ng-model="member.country">
+					<option value="" disabled selected>Select your country</option>
+					<option ng-repeat="country in countries" value="{{country}}">{{country}}</option>
+				</select>
+				<div class="help-block" ng-messages="memberForm.country.$error" ng-if="memberForm.country.$touched">
+					<div ng-messages-include="validation-messages"></div>
+				</div>
+			</div>
+
+
+		</div>
+		<button class="add-new-author__button-confirm center disabled" ng-click="save()" ng-disabled="memberForm.$invalid">{{ isEditMode ? 'UPDATE' : 'CONFIRM' }}</button>
+	</form>
+</div>

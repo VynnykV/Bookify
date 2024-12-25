@@ -1,0 +1,236 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F2F8D30-AEAA-45BD-A489-C9DC001427F2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bookify.Web</RootNamespace>
+    <AssemblyName>Bookify.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="jsons\countries.json" />
+    <Content Include="jsons\languages.json" />
+    <None Include="packages.config" />
+    <Content Include="dist\main.css" />
+    <Content Include="dist\main.min.css" />
+    <Content Include="images\libraries-icon.png" />
+    <Content Include="images\log-out-icon.png" />
+    <Content Include="images\login-icon.png" />
+    <Content Include="images\menu-icon.png" />
+    <Content Include="images\paper-background.jpg" />
+    <Content Include="images\profile-icon.png" />
+    <Content Include="images\register-icon.png" />
+    <Content Include="images\search-icon.png" />
+    <Content Include="images\steve-jobs-cover.png" />
+    <Content Include="scripts\app\abstract\user.notloggedin.js" />
+    <Content Include="scripts\app\abstract\user.loggedin.js" />
+    <Content Include="scripts\app\constants\barcodeGeneratorBase.js" />
+    <Content Include="scripts\app\constants\serviceBase.js" />
+    <Content Include="scripts\app\directives\customHeader\customHeader.directive.js" />
+    <Content Include="scripts\app\directives\customHeader\customHeader.template.html" />
+    <Content Include="scripts\app\directives\customHeader\customHeader.controller.js" />
+    <Content Include="scripts\app\filters\bookDamageFilter.js" />
+    <Content Include="scripts\app\filters\bookStatusFilter.js" />
+    <Content Include="scripts\app\filters\dateFilterShort.js" />
+    <Content Include="scripts\app\filters\dateFilterLong.js" />
+    <Content Include="scripts\app\routes\addNewBook\addNewBook.controller.js" />
+    <Content Include="scripts\app\routes\addNewBook\addNewBook.route.js" />
+    <Content Include="scripts\app\routes\addNewBook\addNewBook.template.html" />
+    <Content Include="scripts\app\routes\author\author.controller.js" />
+    <Content Include="scripts\app\routes\author\author.route.js" />
+    <Content Include="scripts\app\routes\author\author.template.html" />
+    <Content Include="scripts\app\routes\bookDetails\bookDetails.controller.js" />
+    <Content Include="scripts\app\routes\bookDetails\bookDetails.route.js" />
+    <Content Include="scripts\app\routes\bookDetails\bookDetails.template.html" />
+    <Content Include="scripts\app\routes\bookList\bookList.controller.js" />
+    <Content Include="scripts\app\routes\bookList\bookList.route.js" />
+    <Content Include="scripts\app\routes\bookList\bookList.template.html" />
+    <Content Include="scripts\app\routes\home\home.controller.js" />
+    <Content Include="scripts\app\routes\home\home.route.js" />
+    <Content Include="scripts\app\routes\home\home.template.html" />
+    <Content Include="scripts\app\routes\authors\authors.controller.js" />
+    <Content Include="scripts\app\routes\authors\authors.route.js" />
+    <Content Include="scripts\app\routes\authors\authors.template.html" />
+    <Content Include="scripts\app\routes\search\search.template.html" />
+    <Content Include="scripts\app\services\authorsService.js" />
+    <Content Include="scripts\app\services\languageService.js" />
+    <Content Include="scripts\app\services\statisticsService.js" />
+    <Content Include="scripts\app\services\countryService.js" />
+    <Content Include="scripts\css\ngDialog-theme-default.css" />
+    <Content Include="scripts\css\ngDialog.min.css" />
+    <Content Include="scripts\vendor\angular-hidScanner.js" />
+    <Content Include="scripts\vendor\angular-mousetrap-service.js" />
+    <Content Include="scripts\vendor\angular-ui-bootstrap-modal.js" />
+    <Content Include="scripts\vendor\angularjs-dropdown-multiselect.js" />
+    <Content Include="scripts\vendor\hotkeys.js" />
+    <Content Include="scripts\vendor\hotkeys.min.css" />
+    <Content Include="scripts\vendor\ng-file-upload.js" />
+    <Content Include="scripts\vendor\ngDialog.js" />
+    <Content Include="scripts\vendor\ngDialog.min.js" />
+    <Content Include="styles\.DS_Store" />
+    <Content Include="styles\base\general.scss" />
+    <Content Include="styles\base\module.scss" />
+    <Content Include="styles\main.scss" />
+    <Content Include="styles\pages\bookDetails\bookDetails.scss" />
+    <Content Include="styles\pages\header.scss" />
+    <Content Include="styles\pages\home\home.scss" />
+    <Content Include="styles\pages\module.scss" />
+    <Content Include="styles\vendor\module.scss" />
+    <Content Include="styles\vendor\normalize.scss" />
+    <Content Include="styles\pages\add-library.scss" />
+    <Content Include="styles\pages\add-new-book.scss" />
+    <Content Include="styles\pages\add-new-library-member.scss" />
+    <Content Include="styles\pages\book-details.scss" />
+    <Content Include="styles\pages\book-list.scss" />
+    <Content Include="styles\pages\home.scss" />
+    <Content Include="styles\pages\library-details.scss" />
+    <Content Include="styles\pages\library-hub.scss" />
+    <Content Include="styles\pages\login.scss" />
+    <Content Include="styles\pages\members.scss" />
+    <Content Include="styles\pages\popup.scss" />
+    <Content Include="styles\pages\search.scss" />
+    <Content Include="styles\pages\signup.scss" />
+    <Content Include="styles\pages\user-profile.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="scripts\app\app.config.js" />
+    <Content Include="scripts\app\app.js" />
+    <Content Include="scripts\app\routes\search\search.controller.js" />
+    <Content Include="scripts\app\routes\search\search.route.js" />
+    <Content Include="scripts\app\routes\login\login.route.js" />
+    <Content Include="scripts\app\routes\login\login.template.html" />
+    <Content Include="scripts\app\routes\login\login.controller.js" />
+    <Content Include="scripts\app\routes\signup\signup.controller.js" />
+    <Content Include="scripts\app\routes\signup\signup.route.js" />
+    <Content Include="scripts\app\routes\signup\signup.template.html" />
+    <Content Include="scripts\app\routes\userProfile\userProfile.controller.js" />
+    <Content Include="scripts\app\routes\userProfile\userProfile.route.js" />
+    <Content Include="scripts\app\routes\userProfile\userProfile.template.html" />
+    <Content Include="scripts\app\services\authInterceptorService.js" />
+    <Content Include="scripts\app\services\AuthService.js" />
+    <Content Include="scripts\app\services\bookSearchService.js" />
+    <Content Include="scripts\app\services\getLibrariesService.js" />
+    <Content Include="scripts\app\services\userService.js" />
+    <Content Include="scripts\vendor\angular-ui-router.js" />
+    <Content Include="scripts\vendor\angular.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58254</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58254/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

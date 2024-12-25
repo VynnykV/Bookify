@@ -1,0 +1,1 @@
+﻿angular.module('myApp').constant('barcodeGeneratorBase', 'http://barcodes4.me/barcode/i2of5/');

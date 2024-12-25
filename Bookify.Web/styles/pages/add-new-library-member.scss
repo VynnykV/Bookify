@@ -1,0 +1,60 @@
+.add-new-member__button {
+    border: 0;
+    background-color: #b59a56;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+.add-new-member__profile-pic {
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        width: 30.5%;
+        display: block;
+    }
+
+    .add-new-member__profile-pic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .add-new-member__button {
+        margin-left: auto;
+        margin-right: auto;
+
+        &:nth-of-type(2) {
+            margin-top: 10px;
+            background-color: grey;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .add-new-member {
+        display: block !important;
+    }
+
+    .add-new-member__wrapper {
+        display: flex;
+        width: 100%;
+
+        .form-group {
+            width: 31%;
+        }
+    }
+}

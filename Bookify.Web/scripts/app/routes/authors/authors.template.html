@@ -1,0 +1,42 @@
+<div class="book-list__search">
+    <a ui-sref="createAuthor">
+        <div class="library-hub__add-button">
+            <span>Add New Author</span>
+            <img src="./images/add-icon.png" alt="">
+        </div>
+    </a>
+    <div class="homepage__search-bar">
+        <input class="search-bar__input" type="text" placeholder="Search..." ng-model="searchQuery" ng-keyup="$event.keyCode == 13 && search()" ng-submit="search()" />
+        <a class="search-bar__button" ng-click="search()">
+            <img src="./images/search-icon.png" alt="">
+        </a>
+    </div>
+</div>
+
+<div class="members__container">
+    <div class="book-list">
+        <div class="book-list__header">
+            <div class="book-list__item members">#</div>
+            <div class="book-list__item members">First Name</div>
+            <div class="book-list__item members">Last Name</div>
+            <div class="book-list__item members">Biography</div>
+            <div class="book-list__item members">Birth Date</div>
+            <div class="book-list__item members">Death Date</div>
+            <div class="book-list__item members">Country</div>
+        </div>
+        <div class="book-list__line"></div>
+        <div class="book-list__container">
+            <div class="book-list__book" ng-repeat="member in members" ng-click="redirectToEdit(member.id)">
+                <div class="book-list__wrapper">
+                    <div class="book-list__item members">{{$index+1}}</div>
+                    <div class="book-list__item members">{{member.firstName}}</div>
+                    <div class="book-list__item members">{{member.lastName}}</div>
+                    <div class="book-list__item members">{{member.biography}}</div>
+                    <div class="book-list__item members">{{member.birthDate | date:'yyyy-MM-dd'}}</div>
+                    <div class="book-list__item members">{{member.deathDate | date:'yyyy-MM-dd'}}</div>
+                    <div class="book-list__item members">{{member.country}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

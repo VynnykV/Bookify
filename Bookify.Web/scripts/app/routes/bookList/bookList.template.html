@@ -1,0 +1,33 @@
+<div class="book-list__search">
+    <a ui-sref="addNewBook">
+        <div class="library-hub__add-button">
+            <span>Add New Book</span>
+            <img src="./images/add-icon.png" alt="">
+        </div>
+    </a>
+    <div class="homepage__search-bar">
+        <input class="search-bar__input" type="text" placeholder="Search..." ng-model="searchQuery" ng-keyup="$event.keyCode == 13 && search()" ng-submit="search()" />
+        <a class="search-bar__button" ng-click="search()">
+            <img src="./images/search-icon.png" alt="">
+        </a>
+    </div>
+</div>
+
+<div class="book-list">
+    <div class="book-list__header">
+        <div class="book-list__item">#</div>
+        <div class="book-list__item" ng-click="setSortOption('title')">Title <img src="./images/triangle.png" class="book-list__triangle"></div>
+        <div class="book-list__item" ng-click="setSortOption('description')">Description <img src="./images/triangle.png" class="book-list__triangle"></div>
+        <div class="book-list__item" ng-click="setSortOption('language')">Language <img src="./images/triangle.png" class="book-list__triangle"></div>
+    </div>
+    <div class="book-list__line"></div>
+    <div class="book-list__container">
+        <div class="book-list__book" ng-repeat="book in books" ng-click="redirectToEdit(book.id)">
+            <div class="book-list__item">{{$index+1}}.</div>
+            <div class="book-list__item">{{book.title}}</div>
+            <div class="book-list__item">{{book.description}}</div>
+            <div class="book-list__item">{{book.language}}</div>
+        </div>
+        <button class="show-more__button" ng-click="loadMoreBooks()" ng-hide="disableMoreResults">Show More Results</button>
+    </div>
+</div>

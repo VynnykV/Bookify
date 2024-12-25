@@ -1,0 +1,253 @@
+.signup__info {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+    display: inline;
+    margin-left: 2px;
+}
+
+
+.signup__header {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 28px;
+
+    span:nth-child(1) {
+        color: #b59a56;
+    }
+
+    span:nth-child(2) {
+        margin-top: 5px;
+        display: inline-block;
+    }
+}
+
+.signup__benefit {
+    margin-top: 50px;
+    text-align: center;
+
+    img {
+        width: 100px;
+    }
+
+    .benefit__content {
+        .benefit__header {
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        .benefit__description {
+            margin-top: 5px;
+            line-height: 1.3;
+        }
+    }
+}
+
+.signup__form {
+    margin-top: 50px;
+    padding: 25px;
+    width: calc(100% - 50px);
+    background-color: white;
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.1);
+
+    .signup__form-header {
+        font-family: 'Playfair Display', serif;
+        font-weight: 900;
+        color: #b59a56;
+        font-size: 30px;
+    }
+
+    .signup__form-description {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+
+    .signup__button {
+        border: 0;
+        background-color: #b59a56;
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        color: white;
+        font-weight: 600;
+
+        &:disabled {
+            background-color: #cacaca;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+
+        span {
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            border: 0;
+            padding: 10px;
+            width: calc(100% - 20px);
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+        }
+
+        .help-block {
+            color: red;
+            font-weight: 500;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .signup__benefit {
+        width: 49%;
+        display: inline-block;
+
+        .benefit__content {
+            width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .signup {
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.1);
+        margin-top: 125px;
+        margin-bottom: -75px;
+    }
+
+    .signup__header {
+        font-size: 36px;
+    }
+
+    .signup__form {
+        width: calc(80% - 50px);
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: -75px;
+        border-radius: 5px;
+
+        .signup__container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            display: inline-block;
+            width: 48.5%;
+
+            .help-block {
+                position: relative;
+                bottom: -10px;
+            }
+        }
+
+        .signup__button {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .signup__benefit {
+        text-align: left;
+        display: inline-flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        img {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .benefit__content {
+            display: inline-block;
+            margin-left: 0;
+            margin-right: 0;
+
+            .benefit__header {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .signup__header {
+        font-size: 36px;
+    }
+
+    .signup__form {
+        .form-group {
+            width: 31%;
+        }
+
+        .signup__form-header {
+            font-size: 42px;
+        }
+
+        .signup__form-description {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+    }
+
+    .signup__benefit {
+        .benefit__content {
+            width: 320px;
+        }
+    }
+
+    .signup__header {
+        font-size: 42px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .signup__header {
+        font-size: 52px;
+    }
+
+    .signup__benefit {
+        img {
+            width: 125px;
+        }
+    }
+
+    .signup__benefit .benefit__header {
+        font-size: 26px;
+    }
+
+    .signup__benefit .benefit__description {
+        font-size: 17px;
+    }
+
+    .signup__benefit .benefit__content {
+        width: 360px;
+    }
+
+    .signup__form {
+        .signup__button {
+            width: 31%;
+        }
+    }
+}

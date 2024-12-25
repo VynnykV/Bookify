@@ -1,0 +1,34 @@
+﻿<div class="login">
+	<div class="login__content">
+		<div class="logo">Bookify</div>
+
+		<form name="loginForm" novalidate>
+			<input class="login__username"
+				   type="text"
+				   placeholder="Email or username"
+				   ng-model="loginData.userName"
+				   required>
+
+			<div class="login__password-wrapper">
+				<input class="login__password-input"
+					   type="password"
+					   placeholder="Password"
+					   ng-model="loginData.password"
+					   required />
+
+				<button class="login__button disabled"
+						ng-click="login()"
+						ng-disabled="loginForm.$invalid">
+					LOGIN
+				</button>
+			</div>
+		</form>
+
+		<div class="login__wrapper">
+			<div class="login__remember-me">
+				<input type="checkbox" ng-model="isUserRemembered" />
+				<span>Remember me</span>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,118 @@
+﻿<customheader></customheader>
+
+<div class="signup__info">
+    <div class="signup__header">
+        <span>Those who do not read, do not live.</span>
+        <span>Live with Bookify.</span>
+    </div>
+    <div class="signup__benefits">
+        <div class="signup__benefit">
+            <img src="./images/book-icon.png" alt="">
+            <div class="benefit__content">
+                <div class="benefit__header">DIGITAL BOOK ACCESS</div>
+                <div class="benefit__description">Effortlessly browse and download your favorite digital books.</div>
+            </div>
+        </div>
+        <div class="signup__benefit">
+            <img src="./images/magnifier-icon.png" alt="">
+            <div class="benefit__content">
+                <div class="benefit__header">ADVANCED SEARCH</div>
+                <div class="benefit__description">Find the books you need with our powerful search tools.</div>
+            </div>
+        </div>
+        <div class="signup__benefit">
+            <img src="./images/favorite-book.png" alt="">
+            <div class="benefit__content">
+                <div class="benefit__header">PERSONALIZED RECOMMENDATIONS</div>
+                <div class="benefit__description">Get tailored book suggestions based on your interests.</div>
+            </div>
+        </div>
+        <div class="signup__benefit">
+            <img src="./images/reviews.png" alt="">
+            <div class="benefit__content">
+                <div class="benefit__header">BOOK REVIEWS</div>
+                <div class="benefit__description">Read reviews from fellow book lovers and share your thoughts on your favorite reads.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<form class="signup" name="signUpForm" novalidate>
+    <div class="signup__form">
+        <div class="signup__form-header">Registration</div>
+        <div class="signup__form-description">Enter your information to register in the system.</div>
+
+        <div class="signup__container">
+            <div class="form-group">
+                <span>E-MAIL ADDRESS <span class="required">*</span></span>
+                <input type="email" placeholder="E-mail" name="email" ng-model="registration.email" required>
+                <div class="help-block" ng-messages="signUpForm.email.$error" ng-if="signUpForm.email.$touched">
+                    <div ng-messages-include="validation-messages"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span>PASSWORD <span class="required">*</span></span>
+                <input type="password" placeholder="Password" name="password" ng-model="registration.password" ng-minlength="6" required>
+                <div class="help-block" ng-messages="signUpForm.password.$error" ng-if="signUpForm.password.$touched">
+                    <div ng-messages-include="validation-messages"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span>CONFIRM PASSWORD <span class="required">*</span></span>
+                <input type="password" placeholder="Confirm Password" name="confirmPassword" ng-model="registration.confirmPassword" ng-pattern="{{registration.password}}" required>
+                <div class="help-block" ng-messages="signUpForm.confirmPassword.$error" ng-if="signUpForm.confirmPassword.$touched">
+                    <div ng-messages-include="validation-messages"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span>USERNAME<span class="required">*</span></span>
+                <input type="text" placeholder="Username" name="username" ng-model="registration.username" required>
+                <div class="help-block" ng-messages="signUpForm.username.$error" ng-if="signUpForm.username.$touched">
+                    <div ng-messages-include="validation-messages"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span>FIRST NAME</span>
+                <input type="text" placeholder="First Name" name="firstname" ng-model="registration.firstname">
+                <div class="help-block" ng-messages="signUpForm.firstname.$error" ng-if="signUpForm.firstname.$touched">
+                    <div ng-messages-include="validation-messages"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span>LAST NAME</span>
+                <input type="text" placeholder="Last Name" name="lastname" ng-model="registration.lastname">
+                <div class="help-block" ng-messages="signUpForm.lastname.$error" ng-if="signUpForm.lastname.$touched">
+                    <div ng-messages-include="validation-messages"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span>COUNTRY</span>
+                <select name="country" ng-model="registration.country">
+                    <option value="" disabled selected>Select your country</option>
+                    <option ng-repeat="country in countries" value="{{country}}">{{country}}</option>
+                </select>
+                <div class="help-block" ng-messages="signUpForm.country.$error" ng-if="signUpForm.country.$touched">
+                    <div ng-messages-include="validation-messages"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span>CITY</span>
+                <input type="text" placeholder="City" name="city" ng-model="registration.city">
+                <div class="help-block" ng-messages="signUpForm.city.$error" ng-if="signUpForm.city.$touched">
+                    <div ng-messages-include="validation-messages"></div>
+                </div>
+            </div>
+
+            <div class="form-group">  
+            </div>
+        </div>
+
+        <button class="signup__button disabled" ng-click="signUp()" ng-disabled="signUpForm.$invalid">CONFIRM</button>
+    </div>
+</form>

@@ -1,0 +1,98 @@
+.add-new-author {
+    width: calc(80% - 50px);
+    background-color: white;
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 25px;
+
+    input[type=number]::-webkit-inner-spin-button,
+	input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin: 0;
+    }
+
+    .add-new-author__button-confirm {
+        margin-top: 15px;
+        padding: 10px;
+        display: block;
+        background-color: #b59a56;
+        color: white;
+        border: 0;
+        font-weight: 600;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+        font-size: 15px;
+    }
+}
+
+.add-new-author__header {
+    font-size: 26px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #b59a56;
+}
+
+.add-new-author__info-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    label {
+        font-weight: 600;
+        font-size: 16px;
+        display: block;
+        margin-top: 25px;
+        margin-bottom: 5px;
+    }
+
+    input {
+        border: 0;
+        margin: 0;
+        padding: 10px;
+        width: calc(100% - 20px);
+        display: inline-block;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+    }
+
+    textarea {
+        border: 0;
+        margin: 0;
+        padding: 10px;
+        display: inline-block;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        display: block;
+        width: 48%;
+
+        .help-block {
+            font-weight: 500;
+            color: red;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .add-new-author__info-wrapper {
+        .form-group {
+            width: 31%;
+        }
+    }
+
+    .add-new-author__button-confirm {
+        width: 200px;
+    }
+
+    .add-new-author__header {
+        font-size: 32px;
+    }
+}

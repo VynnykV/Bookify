@@ -1,0 +1,154 @@
+.thumb {
+    height: 240px;
+    max-width: 100%; /* Забезпечує, що зображення не перевищує ширину контейнера */
+    float: none;
+    position: relative;
+    object-fit: cover; /* Зберігає пропорції зображення, обрізаючи його */
+    border-radius: 5px; /* Додає округлення для покращення вигляду */
+}
+
+.add-new-book {
+    width: calc(80% - 50px);
+    background-color: white;
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 25px;
+
+    .bootstrap * {
+        color: black;
+    
+        input {
+            width: auto;
+        }
+    
+        ul {
+
+            padding: 0 10px;
+            width: 300px;
+        }
+    }
+}
+
+.add-new-book input[type=number]::-webkit-inner-spin-button,
+.add-new-book input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+}
+
+.add-new-book__header {
+    font-size: 26px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #b59a56;
+}
+
+.add-new-book__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.add-new-book__info-wrapper {
+    flex: 1;
+    min-width: 300px;
+}
+
+.add-new-book__right {
+    width: 100%;
+}
+
+.add-new-book__upload {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: buttonface;
+    color: black;
+    border: 0;
+    border-radius: 5px;
+}
+
+.add-new-book__button-confirm {
+    margin-top: 15px;
+    padding: 10px;
+    display: block;
+    background-color: #b59a56;
+    color: white;
+    border: 0;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+    font-size: 15px;
+}
+
+.add-new-book__button-confirm:disabled {
+    background-color: #cacaca;
+}
+
+.add-new-book label {
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.add-new-book input,
+.add-new-book textarea,
+.add-new-book select {
+    border: 0;
+    margin: 0;
+    padding: 10px;
+    width: calc(100% - 20px);
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.add-new-book .form-group {
+    width: 100%;
+}
+
+.add-new-book .help-block {
+    font-weight: 500;
+    color: red;
+}
+
+@media screen and (min-width: 1024px) {
+    .add-new-book__header {
+        font-size: 32px;
+    }
+
+    .add-new-book__content {
+        flex-wrap: nowrap;
+    }
+
+    .add-new-book__info-wrapper {
+        width: 55%;
+    }
+
+    .add-new-book__right {
+        width: 40%;
+        margin-left: 5%;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .add-new-book {
+        padding: 50px;
+        width: calc(80% - 100px);
+    }
+
+    .add-new-book__header {
+        font-size: 38px;
+    }
+
+    .add-new-book__button-confirm {
+        width: 200px;
+    }
+}
+

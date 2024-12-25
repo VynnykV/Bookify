@@ -1,0 +1,170 @@
+.book-details {
+    width: 80%;
+    margin: 0px auto;
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+
+.book-details .homepage__search-bar {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    /* @extend %every-box; */
+}
+
+.search-bar__input {
+    padding-left: 10px;
+    border-width: 0px;
+    border-radius: 5px;
+    height: 100%;
+    width: calc(100% - 50px);
+}
+
+.search-bar__input:focus {
+    outline-width: 0;
+}
+
+.search-bar__button {
+    float: right;
+    width: 40px;
+    height: 100%;
+    background-color: #000000;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.search-bar__button img {
+    width: 20px;
+    margin: 10px;
+}
+
+.search-bar__button:hover {
+    background-color: #333333;
+}
+
+.book-details__container {
+    width: 100%;
+    margin-top: 50px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.book-details__book-bar {
+    text-align: center;
+    background-color: #b59a56;
+    padding: 25px;
+}
+
+.book-bar__name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: white;
+    margin: 0;
+}
+
+.book-bar__author {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.book-details__content {
+    margin: 40px;
+}
+
+.book-details__content h1,
+.book-description h1 {
+    font-size: 24px;
+    color: #b59a56;
+}
+
+.book-details__content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 25px;
+}
+
+.book-cover {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.book-details__information {
+    margin-left: 25px;
+    line-height: 1.8;
+}
+
+.book-details__information p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.book-details__information p strong {
+    color: #8b8b8b;
+}
+
+.btn-read-book {
+    display: inline-block;
+    padding: 4px 6px;
+    background-color: #b59a56;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.book-description {
+    margin-top: 40px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.book-description p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* Адаптивні стилі */
+@media screen and (max-width: 770px) {
+    .book-details {
+        width: 90%;
+    }
+    .homepage__search-bar {
+        width: 70%;
+    }
+    .book-details__content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .book-details__information {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .book-details {
+        width: 100%;
+    }
+    .book-details__book-bar {
+        padding: 20px;
+    }
+    .book-bar__name {
+        font-size: 28px;
+    }
+    .book-bar__author {
+        font-size: 20px;
+    }
+    .book-details__content {
+        margin: 20px;
+    }
+    .homepage__search-bar {
+        width: 80%;
+    }
+}

@@ -1,0 +1,46 @@
+﻿<div class="navbar">
+    <div class="logo" ui-sref="home">Bookify</div>
+    <div class="navbar__items">
+        <span ng-hide="isLoggedIn">
+            <a class="navbar__item" ui-sref="login">LOGIN</a>
+            <a class="navbar__item" ui-sref="signup">REGISTER</a>
+        </span>
+
+        <span ng-show="isLoggedIn && role == 'User'">
+            <a class="navbar__item" ui-sref="search">ALL BOOKS</a>
+            <a class="navbar__item" ui-sref="userProfile">PROFILE</a>
+            <a class="navbar__item" ng-click="logOut()">LOGOUT</a>
+        </span>
+        <span ng-show="isLoggedIn && role == 'Admin'">
+            <a class="navbar__item" ui-sref="bookList">BOOKS</a>
+            <a class="navbar__item" ui-sref="authors">AUTHORS</a>
+            <a class="navbar__item" ng-click="logOut()">LOGOUT</a>
+        </span>
+    </div>
+    <input type="checkbox" id="navbar__toggle">
+    <label class="navbar__toggle" for="navbar__toggle">
+        <div class="navbar__menu">
+            <div class="navbar__menu-bar"></div>
+            <div class="navbar__menu-bar"></div>
+            <div class="navbar__menu-bar"></div>
+        </div>
+    </label>
+    <div class="navbar__items-mobile">
+        <span ng-hide="isLoggedIn">
+            <a class="navbar__item" ui-sref="login">LOGIN</a>
+            <a class="navbar__item" ui-sref="signup">REGISTER</a>
+        </span>
+
+        <span ng-show="isLoggedIn && role == 'User'">
+            <a class="navbar__item" ui-sref="libraryHub">LIBRARIES</a>
+            <a class="navbar__item" ui-sref="userProfile">PROFILE</a>
+            <a class="navbar__item" ng-click="logOut()">LOGOUT</a>
+        </span>
+        <span ng-show="isLoggedIn && role == 'Admin'">
+            <a class="navbar__item" ui-sref="lendAndReturn">LEND/RETURN</a>
+            <a class="navbar__item" ui-sref="booksList">BOOKS</a>
+            <a class="navbar__item" ui-sref="statistics">STATISTICS</a>
+            <a class="navbar__item" ng-click="logOut()">LOGOUT</a>
+        </span>
+    </div>
+</div>
